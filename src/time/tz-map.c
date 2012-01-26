@@ -416,7 +416,8 @@ button_pressed (GtkWidget *w, GdkEventButton *event, gpointer data)
 		        e_map_point_set_color_rgba (tzmap->map,
 						    tzmap->point_selected,
 						    TZ_MAP_POINT_NORMAL_RGBA);
-		tzmap->point_selected = tzmap->point_hover;
+		tzmap->point_selected =
+			e_map_get_closest_point (tzmap->map, longitude, latitude, FALSE);
 
 		location_combo = gst_dialog_get_widget (tzmap->tool->main_dialog, "location_combo");
 		tz_location    = e_tz_map_location_from_point (tzmap, tzmap->point_selected);

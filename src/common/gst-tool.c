@@ -221,6 +221,7 @@ gst_tool_constructor (GType                  type,
 	gchar *widget_name;
 	GtkWidget *dialog;
 	OobsResult result;
+	int i;
 
 	object = (* G_OBJECT_CLASS (gst_tool_parent_class)->constructor) (type,
 									  n_construct_properties,
@@ -239,6 +240,12 @@ gst_tool_constructor (GType                  type,
 		widget_name = g_strdup_printf ("%s_admin", tool->name);
 		tool->main_dialog = gst_dialog_new (tool, widget_name, tool->title, tool->lock_button);
 		g_free (widget_name);
+	}
+
+	for (i=0; i<12; i++) { /* Loop for 3 seconds waiting for the backends to start */
+		if (oobs_session_get_connected (tool->session))
+			break;
+		g_usleep(250000);
 	}
 
 	result = oobs_session_get_platform (tool->session, NULL);

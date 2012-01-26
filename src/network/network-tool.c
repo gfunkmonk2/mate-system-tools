@@ -152,6 +152,11 @@ gst_network_tool_constructor (GType                  type,
   tool->dialog = connection_dialog_init (GST_TOOL (tool));
   tool->host_aliases_dialog = gst_dialog_get_widget (GST_TOOL (tool)->main_dialog, "host_aliases_edit_dialog");
 
+  if (!g_file_test ("/usr/sbin/NetworkManager", G_FILE_TEST_IS_EXECUTABLE)) {
+    gtk_widget_set_visible (gst_dialog_get_widget (GST_TOOL (tool)->main_dialog, "hbox3"), TRUE);
+    gtk_widget_set_visible (gst_dialog_get_widget (GST_TOOL (tool)->main_dialog, "locations_box"), TRUE);
+  }
+
   return object;
 }
 

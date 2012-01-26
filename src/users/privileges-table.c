@@ -65,6 +65,7 @@ static const PrivilegeDescription descriptions[] = {
 	{ "plugdev", N_("Access external storage devices automatically") },
 	{ "powerdev", N_("Suspend and hibernate the computer") },
 	{ "proc", N_("Access /proc filesystem") },
+	{ "sambashare", N_("Share files with the local network") },
 	{ "scanner", N_("Use scanners") },
 	{ "tape", N_("Use tape drives") },
 	{ "usb", N_("Use USB devices") },

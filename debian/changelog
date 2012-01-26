@@ -1,0 +1,29 @@
+mate-system-tools (1.1.0-4) oneiric; urgency=low
+
+  * Fix compile on amd64
+
+ -- Matt Rinsch <gfunkmonk@gmail.com>  Thu, 19 Jan 2012 16:27:32 -0500
+
+mate-system-tools (1.1.0-3) oneiric; urgency=low
+
+  * Fix Time & Date icon
+
+ -- Matt Rinsch <gfunkmonk@gmail.com>  Thu, 19 Jan 2012 13:01:13 -0500
+
+mate-system-tools (1.1.0-2) oneiric; urgency=low
+
+  * Fixed package -- programs now install
+
+ -- Matt Rinsch <gfunkmonk@gmail.com>  Wed, 18 Jan 2012 23:20:41 -0500
+
+mate-system-tools (1.1.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Stefano Karapetsas <stefano@karapetsas.com>  Wed, 14 Dec 2011 12:55:27 +0100
+
+mate-system-tools (1.0.7-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Stefano Karapetsas <stefano@karapetsas.com>  Tue, 22 Nov 2011 23:22:00 +0100

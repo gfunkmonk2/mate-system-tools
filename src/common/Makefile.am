@@ -15,6 +15,8 @@ libsetuptool_a_SOURCES = \
 	gst-dialog.h \
 	gst-tool.c \
 	gst-tool.h \
+	gst-package.c \
+	gst-package.h \
 	gst-platform-dialog.c \
 	gst-platform-dialog.h \
 	gst-filter.c \
